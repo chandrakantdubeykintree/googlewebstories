@@ -1,46 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html amp lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="My First Web Story - A short and engaging story showcasing content">
   <title>My First Web Story</title>
-  <link rel="stylesheet" href="styles.css">
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "My First Web Story",
+    "description": "A short and engaging web story to showcase content",
+    "publisher": {
+      "@type": "Organization",
+      "name": "My Website",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://example.com/logo.png"
+      }
+    },
+    "image": "https://via.placeholder.com/800x1200",
+    "url": "https://example.com/my-first-web-story"
+  }
+  </script>
+
+  <!-- AMP Story Specific Tags -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+
+  <!-- Meta Tags for SEO -->
+  <meta property="og:image" content="https://via.placeholder.com/800x1200">
+  <meta property="og:title" content="My First Web Story">
+  <meta property="og:description" content="A short and engaging web story to showcase content">
+
+  <link rel="canonical" href="https://example.com/my-first-web-story">
 </head>
 <body>
 
-<amp-story standalone title="My First Web Story" publisher="My Site" publisher-logo-src="https://example.com/logo.png">
-  <amp-story-page id="page1">
-    <amp-story-grid-layer template="fill">
-      <img src="https://via.placeholder.com/800x1200" alt="Image 1" width="800" height="1200">
-    </amp-story-grid-layer>
-    <amp-story-grid-layer template="vertical">
-      <h1>Welcome to My Web Story</h1>
-      <p>Here's a cool story!</p>
-    </amp-story-grid-layer>
-  </amp-story-page>
+  <amp-story standalone
+    title="My First Web Story"
+    publisher="My Website"
+    publisher-logo-src="https://example.com/logo.png"
+    poster-portrait-src="https://via.placeholder.com/800x1200">
 
-  <amp-story-page id="page2">
-    <amp-story-grid-layer template="fill">
-      <img src="https://via.placeholder.com/800x1200" alt="Image 2" width="800" height="1200">
-    </amp-story-grid-layer>
-    <amp-story-grid-layer template="vertical">
-      <h1>Enjoy the Story</h1>
-      <p>More content is coming!</p>
-    </amp-story-grid-layer>
-  </amp-story-page>
-  
-  <amp-story-page id="page3">
-    <amp-story-grid-layer template="fill">
-      <img src="https://via.placeholder.com/800x1200" alt="Image 3" width="800" height="1200">
-    </amp-story-grid-layer>
-    <amp-story-grid-layer template="vertical">
-      <h1>Thank You for Watching!</h1>
-      <p>Hope you enjoyed it!</p>
-    </amp-story-grid-layer>
-  </amp-story-page>
-</amp-story>
+    <!-- Story Page 1 -->
+    <amp-story-page id="page1">
+      <amp-story-grid-layer template="fill">
+        <amp-img src="https://via.placeholder.com/800x1200" width="800" height="1200" layout="responsive" alt="Image description"></amp-img>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer template="vertical">
+        <h1>Welcome to My Web Story</h1>
+        <p>This is the first page of our engaging Web Story.</p>
+      </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story Page 2 -->
+    <amp-story-page id="page2">
+      <amp-story-grid-layer template="fill">
+        <amp-img src="https://via.placeholder.com/800x1200" width="800" height="1200" layout="responsive" alt="Image description"></amp-img>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer template="vertical">
+        <h2>Exploring More Features</h2>
+        <p>Here is the second page of the web story.</p>
+      </amp-story-grid-layer>
+    </amp-story-page>
+
+    <!-- Story Page 3 -->
+    <amp-story-page id="page3">
+      <amp-story-grid-layer template="fill">
+        <amp-img src="https://via.placeholder.com/800x1200" width="800" height="1200" layout="responsive" alt="Image description"></amp-img>
+      </amp-story-grid-layer>
+      <amp-story-grid-layer template="vertical">
+        <h2>Thank You for Reading!</h2>
+        <p>We hope you enjoyed our Web Story!</p>
+      </amp-story-grid-layer>
+    </amp-story-page>
+
+  </amp-story>
 
 </body>
 </html>
